@@ -1,0 +1,415 @@
+body {
+    background-color: rgb(243, 243, 243);
+}
+  
+footer {
+    padding: 20px;
+    background-color: #363636;
+}
+  
+.footer {
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    color: rgb(243, 243, 243);
+    text-align: center;
+}
+  
+  
+@media (max-width: 600px) {
+    nav a {
+      font-size: 28px;
+    }
+  
+    h1 {
+      text-align: center;
+    }
+  
+    img {
+      width: 100%;
+    }
+}
+  
+main {
+    margin: 30px;
+}
+  
+  
+.nav-left {
+    display: flex;
+    column-gap: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+  
+.nav-right,
+.header-top {
+    display: none;
+}
+  
+.active {
+    color: rgb(0, 145, 0);
+}
+
+h1 {
+    font-family: 'Jura', sans-serif;
+    font-size: 54px;
+    color: #363636;
+    text-align: center;
+    margin: 15px;
+}
+  
+h2 {
+    font-family: 'Jura', sans-serif;
+    text-align: center;
+    font-size: 32px;
+    color: #363636;
+}
+
+p {
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    color: #363636;
+}
+
+th {
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    color: #363636;
+    border: 2px solid #363636;
+    padding: 5px;
+}
+  
+td {
+    font-family: 'Jura', sans-serif;
+    font-size: 20px;
+    color: #363636;
+    border: 2px solid #363636;
+    padding: 5px;
+}
+  
+button {
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    color: #363636;
+}
+  
+a {
+    text-decoration: none;
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    color: #363636;
+}
+  
+a:hover {
+    color: rgb(0, 145, 0);
+}
+
+.logo {
+    width: 50px;
+}
+  
+.photos {
+    display: grid;
+    grid: auto-flow 1fr / repeat(3, 1fr);
+    column-gap: 10px;
+}
+
+.photos > img {
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+.modal {
+    position: absolute;
+    top: 100%; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    width: 400px; 
+    height: auto;
+    background-color: rgb(243, 243, 243);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1000;
+}
+
+.modal.show {
+    opacity: 1;
+}
+
+.modal-content {
+    margin: 0;
+    padding: 30px; 
+    width: 100%;
+    max-width: none;
+    border: none;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    color: #363636;
+    text-align: center;
+}
+
+.form-group input {
+    width: 100%; 
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Jura', sans-serif;
+    font-size: 16px;
+    color: #363636;
+    background-color: white;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box; 
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: rgb(0, 145, 0);
+}
+
+
+.modal form button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(0, 145, 0);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-family: 'Jura', sans-serif;
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+}
+
+.modal form button[type="submit"]:hover {
+    background-color: rgb(0, 175, 0);
+}
+
+
+.close {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    font-size: 24px;
+    color: #363636;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: rgb(0, 145, 0);
+}
+
+
+@media (max-width: 800px) {
+    .modal {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .modal.show {
+        transform: translate(-50%, -50%);
+    }
+
+    .form-group input,
+    .modal form button[type="submit"] {
+        width: 100%;
+    }
+}
+
+.header-top {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+}
+
+.auth-buttons {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.auth-buttons a {
+    text-decoration: none;
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    color: #363636;
+    cursor: pointer;
+}
+
+.auth-buttons a:hover {
+    color: rgb(0, 145, 0);
+}
+
+.user-menu {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.user-menu span {
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    color: #363636;
+}
+
+.user-menu button {
+    background: none;
+    border: none;
+    color: #363636;
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.user-menu button:hover {
+    color: rgb(0, 145, 0);
+}
+
+.user-menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+.username {
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    color: #363636;
+}
+
+
+.nav-left form button {
+    background: none;
+    border: none;
+    font-family: 'Jura', sans-serif;
+    font-size: 24px;
+    color: #363636;
+    cursor: pointer;
+    padding: 0;
+}
+
+.nav-left form button:hover {
+    color: rgb(0, 145, 0);
+}
+
+.header-form {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    z-index: 1000;
+    min-width: 300px;
+    margin-top: 10px;
+}
+
+.header-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header-form input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-form button {
+    padding: 8px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.header-form .cancel-btn {
+    text-align: center;
+    color: #666;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.header-form .cancel-btn:hover {
+    text-decoration: underline;
+}
+
+
+header {
+    position: relative;
+    z-index: 100;
+}
+
+nav {
+    position: relative;
+}
+
+.header-form.show {
+    display: block;
+}
+
+section.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+section.list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+section.compact {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 10px;
+}
+
+.add-to-cart {
+    transition: all 0.3s ease;
+}
+
+.add-to-cart.adding {
+    background-color: #ccc;
+    cursor: wait;
+}
+
+.add-to-cart.in-cart {
+    background-color: #4CAF50;
+}
